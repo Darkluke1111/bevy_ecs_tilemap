@@ -63,6 +63,7 @@ impl Default for TilemapId {
 /// Size of the tilemap in tiles.
 #[derive(Component, Reflect, Default, Clone, Copy, Debug, Hash, PartialEq)]
 #[reflect(Component)]
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
 pub struct TilemapSize {
     pub x: u32,
     pub y: u32,
